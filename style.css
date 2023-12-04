@@ -25,6 +25,7 @@ div #app {
     height: 100vh;
 }
 
+
 .container {
     width: 100vw;
 
@@ -35,7 +36,7 @@ div #app {
 
 
     padding: 12px 24px;
-    gap: clamp(16px, 24px, 36px);
+    gap: 24px;
 
     background-color: var(--brand-colors-explorer-dark);
 }
@@ -71,6 +72,10 @@ header form {
     border-radius: 50%;
 }
 
+.main-and-section {
+    overflow-y: scroll;
+}
+
 main img {
     width: 100vw;
 }
@@ -86,4 +91,33 @@ button {
 div .action button img {
     width: 40px;
     height: 40px;
+}
+
+main div {
+    padding: 31px 26px 34px 22px;
+}
+
+.sidebar {
+    padding: 0 24px 39px 22px;
+    width: 100vw;
+
+    gap: 10px;
+
+    overflow-y: scroll;
+}
+
+section .related-article {
+    display: flex;
+    gap: 16px;
+
+    width: 382px;
+    height: 84px;
+}
+
+footer {
+    color: var(--color-text-base);
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--brand-colors-explorer-dark);
 }
