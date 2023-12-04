@@ -1,12 +1,89 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    --brand-colors-explorer-dark: #065E7C;
+    --color-text-base: #ffffff;
 }
 
-:root{
+:root {
     font-size: 62.5%;
+
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+div #app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+}
+
+.container {
+    width: 100vw;
+
+    margin: 0 auto;
+    display: flex;
+
+    align-items: center;
+
+
+    padding: 12px 24px;
+    gap: clamp(16px, 24px, 36px);
+
+    background-color: var(--brand-colors-explorer-dark);
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+header form {
+    flex: 1;
+}
+
+.input-wrapper input {
+    padding: 12px 16px 12px 14px;
+    background-color: rgba(255, 255, 255, 0.20);
+    border: 0;
+    border-radius: .4rem;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--color-text-base);
+    opacity: 0.56;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+main img {
+    width: 100vw;
+}
+
+div .action {
+    gap: 12px;
+}
+
+button {
+    border: none;
+}
+
+div .action button img {
+    width: 40px;
+    height: 40px;
 }
