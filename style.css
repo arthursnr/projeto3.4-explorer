@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 
+    font-family: 'Mulish', sans-serif;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -21,7 +23,7 @@ body {
 
 div #app {
     display: grid;
-    grid-template-rows: max-content 1fr max-content;
+    grid-template-rows: max-content 1fr 1fr max-content;
     height: 100vh;
 }
 
@@ -72,7 +74,8 @@ header form {
     border-radius: 50%;
 }
 
-.main-and-section {
+main,
+section {
     overflow-y: scroll;
 }
 
@@ -98,21 +101,30 @@ main div {
 }
 
 .sidebar {
-    padding: 0 24px 39px 22px;
     width: 100vw;
-
-    gap: 10px;
-
-    overflow-y: scroll;
+    padding: 0 24px 39px 22px;
+    overflow-x: hidden;
+    gap: 32px;
 }
 
 section .related-article {
+    column-gap: 16px;
     display: flex;
-    gap: 16px;
+    place-items: start;
 
+    margin-top: 32px;
     width: 382px;
     height: 84px;
 }
+
+section .related-article div {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+
 
 footer {
     color: var(--color-text-base);
@@ -120,4 +132,40 @@ footer {
     align-items: center;
     padding: 16px;
     background-color: var(--brand-colors-explorer-dark);
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+main div h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+main div p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+
+
+section p {
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+footer {
+    font-size: 16px;
+    font-weight: 600;
 }
