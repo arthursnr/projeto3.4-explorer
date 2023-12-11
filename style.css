@@ -100,7 +100,11 @@ div .action button img {
     height: 40px;
 }
 
+<<<<<<< HEAD
 button+button {
+=======
+button + button {
+>>>>>>> 5cb540642b3e6477d1ea44dde39151f3e356e115
     margin-left: 16px;
 }
 
@@ -177,6 +181,7 @@ footer {
     font-size: 16px;
     font-weight: 600;
 }
+<<<<<<< HEAD
 
 @media (min-width: 1120px) {
 
@@ -252,3 +257,5 @@ footer {
         align-items: center;
     }
 }
+=======
+>>>>>>> 5cb540642b3e6477d1ea44dde39151f3e356e115
