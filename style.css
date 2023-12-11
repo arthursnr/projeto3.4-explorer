@@ -19,6 +19,8 @@
 
 body {
     font-size: 1.6rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 div #app {
@@ -27,6 +29,9 @@ div #app {
     height: 100vh;
 }
 
+.main-and-section {
+    overflow-y: hidden;
+}
 
 .container {
     width: 100vw;
@@ -74,9 +79,8 @@ header form {
     border-radius: 50%;
 }
 
-main,
-section {
-    overflow-y: scroll;
+main {
+    overflow: hidden;
 }
 
 main img {
@@ -84,7 +88,7 @@ main img {
 }
 
 div .action {
-    gap: 12px;
+    gap: 16px;
 }
 
 button {
@@ -94,6 +98,10 @@ button {
 div .action button img {
     width: 40px;
     height: 40px;
+}
+
+button+button {
+    margin-left: 16px;
 }
 
 main div {
@@ -168,4 +176,79 @@ section p {
 footer {
     font-size: 16px;
     font-weight: 600;
+}
+
+@media (min-width: 1120px) {
+
+    /*codigo novo para a versão de pc*/
+    body {
+        background: #F4FCFF;
+    }
+
+    .container {
+        padding: 12px 112px;
+        display: flex;
+        width: 100vw;
+        height: 72px;
+        padding: 12px 112px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .input-wrapper input {
+        display: flex;
+        width: 100%;
+        padding: 12px 16px 12px 14px;
+        align-items: center;
+        gap: 12px;
+        flex-shrink: 0;
+    }
+
+    .main-and-section {
+        padding: 44px 110px 39px 110px;
+
+        display: flex;
+        gap: 16px;
+    }
+
+    main {
+        width: 100%;
+
+    }
+
+    main img {
+        width: auto;
+        height: 405px;
+        flex-shrink: 0;
+    }
+
+    main .description {
+        width: 800px;
+        height: auto;
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    section {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+
+        width: 384px;
+        height: 615px;
+
+        overflow-y: hidden;
+    }
+
+    footer {
+        width: 100vw;
+        height: 64px;
+        padding: 16px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
